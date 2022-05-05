@@ -1,7 +1,17 @@
-import React from 'react'
-
 export const SearchBar = () => {
+
+  function handleChange(event) {
+    const input = event.target.value;
+    console.log(input);
+    }
+
   return (
-    <div>SearchBar</div>
-  )
-}
+    <input
+      onChange={handleChange}
+      id="input"
+      className="search-planets"
+      type="text"
+      placeholder="Search Planets..."
+    ></input>
+  );
+};

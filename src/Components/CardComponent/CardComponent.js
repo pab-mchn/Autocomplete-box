@@ -1,14 +1,14 @@
+import React, {useContext} from 'react'
+import { dataContext } from "../context/DataContext";
 
-const CardComponent = ({ data }) => {
-  return (
-    <div className="CardContainer">
-      {data.map((planet) => (
-        <div key={planet.id}>
-          <h2>{planet.name}</h2>
-        </div>
-      ))}
+const CardComponent = () => {
+  const { data} = useContext(dataContext);
+
+  return data.map((planet) => (
+    <div key={planet.orbital_period}>
+      <h2>{planet.name}</h2>
     </div>
-  );
+  ));
   }
 
 export default CardComponent
