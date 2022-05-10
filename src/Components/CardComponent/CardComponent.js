@@ -5,9 +5,9 @@ const CardComponent = () => {
   const { data} = useContext(dataContext);
 
   return data.map((planet) => (
-    <div key={planet.orbital_period}>
-      <h2>{planet.name}</h2>
-    </div>
+
+      <h2 key={planet.orbital_period}>{planet.name}</h2>
+
   ));
   }
 

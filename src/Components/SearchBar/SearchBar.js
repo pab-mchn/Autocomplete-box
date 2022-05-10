@@ -1,9 +1,8 @@
-import React, { useContext, useState } from "react";
-import { dataContext } from "../context/DataContext";
+import React, { useState } from "react";
 import Suggestions from "../Suggestions/Suggestions";
+import "./SearchBar.css"
 
 export const SearchBar = () => {
-  const { data } = useContext(dataContext);
   const [value, setValue] = useState("");
 
   function handleChange(event) {
@@ -11,16 +10,9 @@ export const SearchBar = () => {
     console.log(value);
   }
 
-  const suggestions = data.filter((planet) => {
-    return planet.name.toLowerCase().startsWith(value);
-  });
-  console.log(suggestions);
-
-   const onSubmit = (e) => {
-     e.preventDefault();
-     const userInput = value;
-     console.log(userInput);
-   };
+  const onSubmit = (e) => {
+    e.preventDefault();
+  };
 
   return (
     <>
@@ -33,9 +25,8 @@ export const SearchBar = () => {
           placeholder="Search
         Planets..."
         ></input>
-        <button>add</button>
+        {value ? <Suggestions value={value} /> : ""}
       </form>
-      {value ? <Suggestions value={value} /> : ""}
     </>
   );
 };
