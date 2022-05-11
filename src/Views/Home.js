@@ -1,9 +1,6 @@
 import { SearchBar } from "../Components/SearchBar/SearchBar";
-import Suggestions from "../Components/Suggestions/Suggestions";
-
 
 function Home() {
-
   return (
     <div>
       <img

@@ -1,4 +1,9 @@
-const PlanetCard = ({ suggestions }) => {
+import React from 'react'
+import { useContext } from "react";
+import { dataContext } from "../context/DataContext";
+
+const PlanetChosed = () => {
+  const { suggestions } = useContext(dataContext);
 
   return suggestions.map((suggested) => {
     return (
@@ -12,6 +17,6 @@ const PlanetCard = ({ suggestions }) => {
       </>
     );
   });
-};
+}
 
-export default PlanetCard;
+export default PlanetChosed

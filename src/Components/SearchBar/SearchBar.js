@@ -14,6 +14,9 @@ export const SearchBar = () => {
     e.preventDefault();
   };
 
+  const onChange = () =>{
+    console.log("culo al guiso")
+  }
   return (
     <>
       <form onSubmit={onSubmit}>
