@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import { dataContext } from "../context/DataContext";
 import PlanetCard from "../PlanetCard/PlanetCard";
 
-const Suggestions = ({ value }) => {
+const Suggestions = ({ value, id }) => {
   const { data } = useContext(dataContext);
 
   const [buttonClicked, setButtonClicked] = useState(false);
@@ -20,10 +20,14 @@ const Suggestions = ({ value }) => {
   return suggestions.map((suggested) => {
     return (
       <>
-        <h1 key={suggested.orbital_period} onClick={handleButtonClick}>
-          {suggested.name}
-        </h1>
-        {buttonClicked ? <PlanetCard suggestions={suggestions} /> : null}
+        <div key={suggested.orbital_period}>
+          <ul>
+            <li onClick={handleButtonClick}>{suggested.name}</li>
+          </ul>
+        </div>
+        {buttonClicked ? (
+          <PlanetCard suggestions={suggestions} id={id} />
+        ) : null}
       </>
     );
   });

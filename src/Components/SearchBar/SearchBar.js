@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Suggestions from "../Suggestions/Suggestions";
-import "./SearchBar.css"
+
+import "./SearchBar.css";
 
 export const SearchBar = () => {
   const [value, setValue] = useState("");
@@ -10,16 +11,9 @@ export const SearchBar = () => {
     console.log(value);
   }
 
-  const onSubmit = (e) => {
-    e.preventDefault();
-  };
-
-  const onChange = () =>{
-    console.log("culo al guiso")
-  }
   return (
     <>
-      <form onSubmit={onSubmit}>
+      <form>
         <input
           onChange={handleChange}
           id="input"
@@ -28,8 +22,10 @@ export const SearchBar = () => {
           placeholder="Search
         Planets..."
         ></input>
-        {value ? <Suggestions value={value} /> : ""}
       </form>
+      <div>
+        {value ? <Suggestions value={value} /> : "" }
+      </div>
     </>
   );
 };
