@@ -20,14 +20,10 @@ const Suggestions = ({ value, id }) => {
   return suggestions.map((suggested) => {
     return (
       <>
-        <div key={suggested.orbital_period}>
-          <ul>
-            <li onClick={handleButtonClick}>{suggested.name}</li>
-          </ul>
+        <div className="suggestedList" key={suggested.orbital_period}>
+          <h4 onClick={handleButtonClick}>{suggested.name}</h4>
         </div>
-        {buttonClicked ? (
-          <PlanetCard suggestions={suggestions} id={id} />
-        ) : null}
+        {buttonClicked && <PlanetCard suggestions={suggestions} id={id} />}
       </>
     );
   });
