@@ -17,7 +17,6 @@ const DataProvider = ({ children }) => {
       value={{
         data,
         setData,
-
       }}
     >
       {children}
