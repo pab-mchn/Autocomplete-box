@@ -22,10 +22,10 @@ export const SearchBar = () => {
           placeholder="Search
         Planets..."
         ></input>
+        <div>
+          {value ? <Suggestions value={value} /> : "Search Star Wars Planets"}
+        </div>
       </form>
-      <div>
-        {value ? <Suggestions value={value} /> : "" }
-      </div>
     </>
   );
 };

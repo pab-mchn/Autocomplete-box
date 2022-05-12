@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { dataContext } from "../context/DataContext";
 import PlanetCard from "../PlanetCard/PlanetCard";
+import "./Suggestions.css"
 
 const Suggestions = ({value}) => {
   const { data } = useContext(dataContext);

@@ -1,0 +1,15 @@
+.suggestedList{
+  background-color: #314dc9;
+  text-align: center;
+  margin-left: 583px;
+  margin-right: 583px;
+  border: 1px solid #2d2e30;
+}
+.suggestedList:hover{
+  background-color: #2950ff;
+  cursor: pointer;
+
+}
+h4{
+  color:#fff;
+}
