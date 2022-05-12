@@ -8,7 +8,6 @@ function Home() {
         alt="Logo"
       />
       <SearchBar />
-
     </div>
   );
 }
