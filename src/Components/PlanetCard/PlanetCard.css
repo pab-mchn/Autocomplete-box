@@ -1,9 +1,10 @@
-.PlanetCointainer{
+.PlanetContainer {
+  display: inline-block;
+}
+.PlanetItem {
   background-color: #2950ff;
-  margin-left: 550px;
-  margin-right: 550px;
   padding: 5px;
-  margin-top: 10px;
+  margin: 10px;
   border-radius: 10px;
-  color: #fff
+  color: #fff;
 }
